@@ -30,7 +30,7 @@ public class VoiceService {
         this.httpHeaders = httpHeaders;
     }
 
-    @Async("threadPoolTaskExecutor")
+    @Async("taskExecutor")
     public CompletableFuture<Text> convertVoiceToText(@NotNull Speech speech) {
         String encodedString = speech.getSpeech();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);

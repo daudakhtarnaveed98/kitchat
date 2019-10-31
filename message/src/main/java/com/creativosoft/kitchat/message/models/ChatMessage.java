@@ -6,6 +6,7 @@ import org.jetbrains.annotations.Contract;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 @Entity
 public class ChatMessage {
@@ -20,6 +21,7 @@ public class ChatMessage {
     @Type(type = "org.hibernate.type.NumericBooleanType")
     private boolean isFile;
 
+    @Lob
     private String text;
     private String fileName;
     private String fileType;
