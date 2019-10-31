@@ -42,4 +42,8 @@ public class MessageSyncingService {
             }
         }
     }
+
+    public List<ChatMessage> getMessagesToSync(String userEmailAddress) {
+        return chatMessageRepository.findMessagesToSync(userEmailAddress);
+    }
 }
