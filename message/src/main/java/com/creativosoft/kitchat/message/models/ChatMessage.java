@@ -1,5 +1,6 @@
 package com.creativosoft.kitchat.message.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.annotations.Type;
 import org.jetbrains.annotations.Contract;
 
@@ -57,6 +58,7 @@ public class ChatMessage {
         this.id = id;
     }
 
+    @JsonProperty(value = "isVoice")
     public boolean isVoice() {
         return isVoice;
     }
@@ -65,6 +67,7 @@ public class ChatMessage {
         isVoice = voice;
     }
 
+    @JsonProperty(value = "isFile")
     public boolean isFile() {
         return isFile;
     }
