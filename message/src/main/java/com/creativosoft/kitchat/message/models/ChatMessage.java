@@ -13,11 +13,11 @@ public class ChatMessage {
     @Id
     private String id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "is_voice")
     @Type(type = "org.hibernate.type.NumericBooleanType")
     private boolean isVoice;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "is_file")
     @Type(type = "org.hibernate.type.NumericBooleanType")
     private boolean isFile;
 
