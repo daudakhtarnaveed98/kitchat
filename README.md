@@ -24,15 +24,16 @@ KitChat architecture is as follows:-
 
 ### How To Run
 1. Clone this repository using `git clone https://github.com/daudakhtarnaveed98/kitchat.git`
-2. Edit the `spring.datasource.url=jdbc:mysql://localhost/your_db_name?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC`
-3. Edit the `application.properties` file in `kitchat/registry/src/main/resources`
+2. Edit the `application.properties` file in `kitchat/registry/src/main/resources`
+3. Edit the `spring.datasource.url=jdbc:mysql://localhost/your_db_name?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC`
 4. Change MySQL username  in `spring.datasource.username=your_username` to your MySQL username
 5. Change MySQL password  in `spring.datasource.password=your_password` to your MySQL password
 6. Now go to `kitchat/eureka-server/` and type `./mvnw clean install spring-boot:run` the eureka server will start.
 7.  Edit the `application.properties` file in `kitchat/message/src/main/resources`
-8. Change MySQL username  in `spring.datasource.username=your_username` to your MySQL username
-9. Change MySQL password  in `spring.datasource.password=your_password` to your MySQL password
-10. Now go to `kitchat/eureka-server/` and type `./mvnw clean install spring-boot:run` the eureka server will start.
-11. Now go to `kitchat/message/` and type `./mvnw clean install spring-boot:run` the message micro-service will start.
-12. Now go to `kitchat/registry/` and type `./mvnw clean install spring-boot:run` the registry micro-service will start.
-13. Now use the application.
+8. Edit the `spring.datasource.url=jdbc:mysql://localhost/your_db_name?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC`
+9. Change MySQL username  in `spring.datasource.username=your_username` to your MySQL username
+10. Change MySQL password  in `spring.datasource.password=your_password` to your MySQL password
+11. Now go to `kitchat/eureka-server/` and type `./mvnw clean install spring-boot:run` the eureka server will start.
+12. Now go to `kitchat/message/` and type `./mvnw clean install spring-boot:run` the message micro-service will start.
+13. Now go to `kitchat/registry/` and type `./mvnw clean install spring-boot:run` the registry micro-service will start.
+14. Now use the application.
