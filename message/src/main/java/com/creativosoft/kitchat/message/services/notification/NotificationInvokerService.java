@@ -67,7 +67,6 @@ public class NotificationInvokerService {
         }
 
         data.put("conversationId", from);
-
         body.put("notification", notification);
         body.put("data", data);
         body.put("android_channel_id", "main-channel");

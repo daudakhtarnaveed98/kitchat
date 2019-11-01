@@ -14,7 +14,7 @@ import java.util.concurrent.CompletableFuture;
 
 @Service
 public class NotificationService {
-    private final String FIREBASE_SERVER_KEY = "AAAAUBUlShM:APA91bG1F72DKA5WzHVy6nic0oRBkxJvp1uoVs_7_SNRUuKX9cOau8q27d2Z6-0KUP3TmSc0gxvlCq8AzgxMagSxIBw_fXjxoOEyjk-2tMUoJzgyOrAmo_72HXGTmc6VjGqiCYrKTPrZ";
+    private final String FIREBASE_SERVER_KEY = "AAAAVz0cMq0:APA91bEG5t0UQPloDhCJRvlOUJOVIWzW_Rv17LEcDgUu7fiohHQgFNZmuBVQvnL7TT983OpkeyNp-tEZJsL3NOWntWymRunpTuNHa2L5Jq6QZtzsB5VbkIC5kZkbUJDq-3Y-OT-0vi8V";
     private final String FIREBASE_API_URL = "https://fcm.googleapis.com/fcm/send";
     private final RestTemplate restTemplate;
 
