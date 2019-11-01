@@ -44,6 +44,8 @@ public class MessageSyncingService {
     }
 
     public List<ChatMessage> getMessagesToSync(String userEmailAddress) {
-        return chatMessageRepository.findMessagesToSync(userEmailAddress);
+        List<ChatMessage> messagesToSync = chatMessageRepository.findMessagesToSync(userEmailAddress);
+        System.out.println(messagesToSync.get(0));
+        return messagesToSync;
     }
 }
