@@ -22,6 +22,10 @@ public class ChatMessageSyncingController {
 
     @RequestMapping(value = "/messages/{userEmailAddress}", method = RequestMethod.GET)
     public List<ChatMessage> getMessagesToSync(@PathVariable String userEmailAddress) {
-        return syncingService.getMessagesToSync(userEmailAddress);
+        List<ChatMessage> messagesToSync = syncingService.getMessagesToSync(userEmailAddress);
+        if (messagesToSync.size() > 0) {
+            return syncingService.getMessagesToSync(userEmailAddress);
+        }
+        return messagesToSync;
     }
 }
