@@ -47,6 +47,7 @@ public class MessageSenderService {
         }
         else {
             pendingMessageRepository.save(new PendingMessage(messageObject.getReceiverId(), messageObjectJson));
+            ResponseEntity<Object> objectResponseEntity = invokerService.sendNotification(messageObject);
         }
     }
 }
