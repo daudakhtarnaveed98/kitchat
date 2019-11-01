@@ -23,6 +23,7 @@ public class NotificationInvokerService {
     // TODO: Autowire these.
     private JSONObject body;
     private JSONObject notification;
+    private JSONObject data;
 
     @Contract(pure = true)
     @Autowired
@@ -31,6 +32,7 @@ public class NotificationInvokerService {
         this.userRepository = userRepository;
         body = new JSONObject();
         notification = new JSONObject();
+        data = new JSONObject();
     }
 
     public ResponseEntity<Object> sendNotification(@NotNull ChatMessage messageObject) {
@@ -64,7 +66,11 @@ public class NotificationInvokerService {
             notification.put("body", from + " sent: " + " " + text);
         }
 
+        data.put("conversationId", from);
+
         body.put("notification", notification);
+        body.put("data", data);
+        body.put("android_channel_id", "main-channel");
 
         HttpEntity<String> request = new HttpEntity<>(body.toString());
         CompletableFuture<String> pushNotification = notificationsService.sendNotificationToFirebase(request);
