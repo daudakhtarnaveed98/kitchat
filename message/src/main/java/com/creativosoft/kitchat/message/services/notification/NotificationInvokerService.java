@@ -55,15 +55,15 @@ public class NotificationInvokerService {
         body.put("to", to);
         body.put("priority", "high");
 
-        notification.put("title", "KitChat");
+        notification.put("title", from);
         if (messageObject.isFile()) {
-            notification.put("body", from + " sent an attachment.");
+            notification.put("body", " sent an attachment.");
         }
         else if (messageObject.isVoice()) {
-            notification.put("body", from + " sent a voice message.");
+            notification.put("body", " sent a voice message.");
         }
         else {
-            notification.put("body", from + " sent: " + " " + text);
+            notification.put("body", " sent: " + " " + text);
         }
 
         data.put("conversationId", from);
