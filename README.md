@@ -15,3 +15,8 @@ KitChat uses micro-service based architecture, currently it has following two mi
 
  - **Registry:** It provides Restful endpoints for user registration, login and update.
  - **Message:** This micro-service provides Restful endpoints for managing user session, send messages, uploading and downloading files.
+
+### Architecture Diagram
+KitChat architecture is as follows:-
+
+![alt text](https://github.com/daudakhtarnaveed98/kitchat/blob/master/kitchat-architecture.png)
