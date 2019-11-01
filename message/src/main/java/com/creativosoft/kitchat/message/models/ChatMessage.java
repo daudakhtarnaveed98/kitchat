@@ -128,4 +128,9 @@ public class ChatMessage {
     public void setGroupId(String groupId) {
         this.groupId = groupId;
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
